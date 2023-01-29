@@ -1,0 +1,33 @@
+version: "3.5"
+
+services:
+  redis:
+    image: redis:6.2-alpine
+    command: redis-server --save 20 1 --loglevel warning --requirepass $INTERNAL_REDIS_PASSWORD
+    networks:
+      - EOSC_RECOMMENDATION_SYSTEM_APP
+    volumes:
+      - type: volume
+        source: EOSCF_RS_INTERNAL_REDIS_DATA
+        target: /data
+
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile-autocompletion
+    container_name: autocompletion-system-app
+    ports:
+      - "0.0.0.0:4560:4559"
+    networks:
+      - EOSC_RECOMMENDATION_SYSTEM_APP
+    depends_on:
+      - redis
+
+
+networks:
+  EOSC_RECOMMENDATION_SYSTEM_APP:
+    name: EOSC_RECOMMENDATION_SYSTEM_APP
+
+volumes:
+  EOSCF_RS_INTERNAL_REDIS_DATA:
+    name: EOSCF_RS_INTERNAL_REDIS_DATA
