@@ -8,4 +8,4 @@ RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
 
 COPY . /app
 
-CMD ["python3.9", "recommendation_system_app.py", "--config_file", "api/config/backend-auto-prod.yaml"]
+CMD ["python3.9", "recommendation_system_app.py", "--config_file", "app/config/backend-providers-recommender-prod.yaml"]

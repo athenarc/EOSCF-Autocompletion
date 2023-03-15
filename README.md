@@ -22,6 +22,7 @@ Build and run:
 
 1. Make sure that you have added the `.env` file in the project root
 2. Run `docker-compose -f docker-compose-autocompletion.yml up`
+3. `http://localhost:4559/v1/health` should return 200 (4559 is our default port, changes in the docker-compose file)
 
 The image can be deployed using `docker-compose` if the `.env` variables are set correctly.
 
@@ -41,7 +42,4 @@ SENTRY_SDN=https://12345...
 # Cronitor is used to monitor the offline updating of our RS data structures
 # stored in redis
 CRONITOR_API_KEY=123aababdas...
-
-# Monitoring access token is used to obtain reliability status of services in the portal before recommending them
-MONITORING_API_ACCESS_TOKEN=daad2dasd...
 ```
