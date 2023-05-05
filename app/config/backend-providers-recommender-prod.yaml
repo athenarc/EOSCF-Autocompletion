@@ -15,7 +15,7 @@ CREDENTIALS: "credentials.yml"
 
 SIMILAR_SERVICES:
   METADATA: ["categories", "scientific_domains", "target_users"]
-  TEXT_ATTRIBUTES: ["name", "description"]
+  TEXT_ATTRIBUTES: ["tagline", "description"]
 
   METADATA_WEIGHT: 0.5
   VIEWED_WEIGHT: 0.5
