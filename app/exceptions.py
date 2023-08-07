@@ -21,7 +21,7 @@ class MissingStructure(Exception):
 
 
 class MissingAttribute(Exception):
-    """ Will be thrown when a requested attribute does not exist in a resource"""
+    """ Will be thrown when a requested attribute does not exist in a service"""
     pass
 
 
@@ -42,5 +42,34 @@ class ModeDoesNotExist(Exception):
         * PORTAL-RECOMMENDER
         * PROVIDERS-RECOMMENDER
         * SIMILAR_SERVICES_EVALUATION
+    """
+    pass
+
+
+class MethodDoesNotExist(Exception):
+    """
+    Will be thrown when the method parameter given is not supported.
+    """
+    pass
+
+
+class NoTextAttributes(Exception):
+    """
+    Will be thrown when no text attributes are provided in the config and the mode running requires them,
+    e.g. autocompletion
+    """
+    pass
+
+
+class DeprecatedMethod(Exception):
+    """
+    Will be thrown when a method not used anymore is picked in the config
+    """
+    pass
+
+
+class RegistryMethodNotImplemented(Exception):
+    """
+    Will be thrown when a registry method not implemented is called
     """
     pass
