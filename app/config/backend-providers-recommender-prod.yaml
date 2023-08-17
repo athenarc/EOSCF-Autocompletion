@@ -18,7 +18,8 @@ SPACY_MODEL: "en_core_web_sm"
 SIMILAR_SERVICES:
   METADATA: ["categories", "scientific_domains", "target_users"]
   TEXT_ATTRIBUTES: ["tagline", "description"]
-
+  SENTENCE_FILTERING_METHOD: "NONE"
+  
   METADATA_WEIGHT: 0.5
   VIEWED_WEIGHT: 0.5
 
