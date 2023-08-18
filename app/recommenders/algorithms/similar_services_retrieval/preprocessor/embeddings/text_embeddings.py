@@ -60,7 +60,8 @@ def create_text_embeddings():
         text_embeddings = [(service_id, get_sbert_embeddings(text_service))
                            for service_id, text_service in tqdm(
                                 list(zip(service_ids, service_texts)),
-                                desc="Service text embeddings"
+                                desc="Service text embeddings",
+                                disable=not APP_SETTINGS['BACKEND']['PROD']
                             )]
 
     elif APP_SETTINGS["BACKEND"]["SIMILAR_SERVICES"]['METHOD'] == 'TF-IDF':
