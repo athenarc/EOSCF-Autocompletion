@@ -23,7 +23,7 @@ class Request(BaseModel):
     # The maximum suggestions per field
     maximum_suggestions: int
 
-    existing_fields_values: Optional[Dict[str, List[str]]] = None
+    existing_fields_values: Optional[Dict[str, List[str]]] = {}
 
     class Config:
         schema_extra = {
