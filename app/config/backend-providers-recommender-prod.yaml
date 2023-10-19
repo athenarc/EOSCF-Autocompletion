@@ -16,7 +16,7 @@ CREDENTIALS: "credentials.yml"
 SPACY_MODEL: "en_core_web_sm"
 
 SIMILAR_SERVICES:
-  METADATA: ["categories", "scientific_domains", "target_users"]
+  METADATA: ["categories", "scientific_domains"]
   TEXT_ATTRIBUTES: ["tagline", "description"]
   SENTENCE_FILTERING_METHOD: "NONE"
   
