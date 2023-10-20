@@ -4,13 +4,13 @@
 
 ## System Architecture
 
-![System Architecture](assets/autocompletion_architecture.png)
-
 The system consists of 3 main components:
 
 - **Similar services component**, responsible for calculating the similarity between the onboarding service and the rest of the services in the catalogue.
 - **Tag retriever component**, responsible for retrieving tags for the onboarding service.
 - **Auto-completion component**, responsible for providing the auto-completion functionality using the results of the previous two components.
+
+![System Architecture](assets/autocompletion_architecture.png)
 
 Concerning persistence the system uses:
 
