@@ -12,7 +12,7 @@ Specifically the service currently suggests:
 - Subcategories
 - Tags
 
-![Autocompletion Example](assets/autocompletion_example.png)
+![assets/autocompletion_example.png](assets/autocompletion_example.png)
 
 The application is built as a microservice with a REST API that is deployed in the porviders infrastructure (from Athena).
 
